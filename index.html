@@ -6,47 +6,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Randow-Article</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script defer
-        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+
+
     <script defer src="js.js"></script>
 </head>
 
 <body>
 
-    <div class="container text-center">
-        <h1>Bienvenido a mi visor de Wikipedia</h1>
-        <!-- <a class="random" href="https://es.wikipedia.org/wiki/Special:Random" target="_blank" data-toggle="tooltip"
-            data-placement="right" title="Click if you want to see random article">Random Articulos</a> -->
+    <section class="container">
         <div class="row">
-            <div class="col">
-                <div id="box-container">
-                    <div class="input-group stylish-input-group">
-                        <input id="wiki-search" type="text" class="form-control" placeholder="Search Wikipedia...">
-                        <span class="input-group-addon">
-                            <button id="wiki">
-                                <i class="fa fa-search" aria-hidden="true"></i>
-                            </button>
-                        </span>
-                    </div>
-                </div>
+            <div class="col-xs-12">
+                <h1 class="text-center">Buscar en Wikipedia</h1>
+                <p class="text-center">Simplemente ingrese un término de búsqueda. Después de hacer clic en la entrada
+                    respectiva, será redirigido al sitio de Wikipedia correspondiente.</p>
             </div>
         </div>
-    </div>
 
-    </div>
-    <div class="container">
-        <ul id="output">
 
-        </ul>
-    </div>
-    <!-- Popper.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-    <script src="https://use.fontawesome.com/872ff62f32.js"></script>
+        <div class="row">
+            <div class="col-xs-12">
+                <form class="text-center" action="">
+                    <input type="text" name="searchtext" id="text" list="json-datalist" size="25">
+                    <button id="searchbutton" type="button" class="material-icons">
+                        <span class="material-icons">
+                            search
+                        </span>
 
-</body>
+
+                        <!-- <span class="glyphicon glyphicon-search" aria-hidden="true"></span> -->
+                    </button>
+                </form>
+
+            </div>
+        </div>
+
+
+        <div id="result"></div>
+
+        <hr />
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="footer text-center">Este sitio fue codificado @danielg2017</div>
+            </div>
+        </div>
+
+    </section>
 
 </html>
